@@ -1,0 +1,68 @@
+{
+  "properties": {
+    "displayName": "Whitelist of Services",
+    "policyType": "Custom",
+    "mode": "All",
+    "description": "",
+    "metadata": {
+      "category": "General",
+      "createdBy": "99eb829e-0c01-40a9-8b6d-030ebcd4c0cc",
+      "createdOn": "2025-12-11T01:03:28.3302755Z",
+      "updatedBy": null,
+      "updatedOn": null
+    },
+    "version": "1.0.0",
+    "parameters": {
+      "effect": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "The effect of the policy (Deny or Audit)"
+        },
+        "allowedValues": [
+          "Deny",
+          "Audit",
+          "Disabled"
+        ],
+        "defaultValue": "Deny"
+      }
+    },
+    "policyRule": {
+      "if": {
+        "field": "type",
+        "notIn": [
+          "Microsoft.Resources/resourceGroups",
+          "Microsoft.ContainerRegistry/registries",
+          "Microsoft.App/managedEnvironments",
+          "Microsoft.App/containerApps",
+          "Microsoft.OperationalInsights/workspaces",
+          "Microsoft.CognitiveServices/accounts",
+          "Microsoft. Search/searchServices",
+          "Microsoft.Storage/storageAccounts",
+          "Microsoft.KeyVault/vaults",
+          "Microsoft.Authorization/roleAssignments",
+          "Microsoft.Insights/diagnosticSettings",
+          "Microsoft.Network/privateEndpoints",
+          "Microsoft.Network/privateDnsZones"
+        ]
+      },
+      "then": {
+        "effect": "[parameters('effect')]"
+      }
+    },
+    "versions": [
+      "1.0.0"
+    ]
+  },
+  "id": "/providers/microsoft.management/managementgroups/9dcc8594-f2c1-4af0-97d7-f208e0873acb/providers/Microsoft.Authorization/policyDefinitions/694f13f462874849bf030f45",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "name": "694f13f462874849bf030f45",
+  "systemData": {
+    "createdBy": "cdvergara@outlook.com",
+    "createdByType": "User",
+    "createdAt": "2025-12-11T01:03:28.2979022Z",
+    "lastModifiedBy": "cdvergara@outlook.com",
+    "lastModifiedByType": "User",
+    "lastModifiedAt": "2025-12-11T01:03:28.2979022Z"
+  }
+}
