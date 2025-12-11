@@ -1,0 +1,11 @@
+subscription_id                   = "your-subscription-id-here"
+region1                          = "eastus"
+region2                          = "centralus"
+rg                               = "terraform-rg"
+panorama-string                  = "your-panorama-registration-string"
+
+# Existing vWAN Resources
+existing_vwan_rg                 = "your-existing-vwan-resource-group"
+existing_vwan_name               = "your-existing-vwan-name"
+existing_vhub_eastus_name        = "your-existing-eastus-hub-name"
+existing_vhub_centralus_name     = "your-existing-centralus-hub-name"
