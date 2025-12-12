@@ -79,7 +79,7 @@ resource "azurerm_palo_alto_next_generation_firewall_virtual_hub_local_rulestack
   resource_group_name = azurerm_resource_group.rg.name
   rulestack_id        = azurerm_palo_alto_local_rulestack.lrs-eastus.id
   marketplace_offer_id = "pan_swfw_cloud_ngfw"
-  plan_id             = "panw-cloud-ngfw-payg"
+  plan_id             = "paloaltonetworks-ngfw-byol"
 
   network_profile {
     public_ip_address_ids        = [azurerm_public_ip.cngfw-pip-eastus.id]
